@@ -14,6 +14,7 @@ int main(void)
 		{
 			putchar((C1 % 10) + '0');
 			putchar((C2 % 10) + '0');
+			if (C1 < 8)
 
 			{
 				putchar(',');
