@@ -15,14 +15,14 @@ int main(void)
 		for (n2 = 0; n2 <= 8; n2++)
 		{
 			for (n3 = 0; n3 <= 9; n3++)
-			for (n4 = 0; n4 <= 8; n4++)
+			for (n4 = n2 + 1; n4 <= 9; n4++)
 			{
 				putchar((n1 % 10) + '0');
 				putchar((n2 % 10) + '0');
 				putchar(' ');
 				putchar((n3 % 10) + '0');
-				putchar((n4 % 10) + '1');
-				if (!(n1 == 9 && n2 == 8 && n3 == 9 && n4 == 8))
+				putchar((n4 % 10) + '0');
+				if (!(n1 == 9 && n2 == 8 && n3 == 9 && n4 == 9))
 
 				{
 					putchar(',');
