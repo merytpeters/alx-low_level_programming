@@ -8,7 +8,7 @@ void print_alphabet(void)
 	int lca;
 
 	lca = 'a';
-	while (lca < 'z')
+	while (lca <= 'z')
 	{
 		_putchar(lca);
 		lca++;
