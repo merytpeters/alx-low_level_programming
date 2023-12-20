@@ -2,13 +2,13 @@
 
 /**
  * _abs - Computes absolute value of an integer
- * @int: Any integer
+ * @i: Any integer
  * Return: 0 (Success)
  */
-int _abs(int)
+int _abs(int i)
 {
 	int a;
 
-	a = _abs(int);
+	a = abs(int i);
 	_putchar('a');
 }
