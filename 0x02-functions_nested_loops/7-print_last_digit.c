@@ -3,7 +3,7 @@
 /**
  * print_last_digit - Prints last digit
  * @i: Last digit
- * Return: 0 (Success)
+ * Return: Last digit
  */
 int print_last_digit(int i)
 {
@@ -11,5 +11,5 @@ int print_last_digit(int i)
 
 	for (j = i % 10; j++)
 		_putchar(j);
-	return (0);
+	return (j);
 }
