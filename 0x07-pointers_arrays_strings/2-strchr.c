@@ -9,9 +9,12 @@
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
+	int b;
+
+	b = 0;
+	while (s[b] != '\0')
 	{
-		if (*s == c)
+		if (s[b] == c)
 		{
 			return (s);
 		}
