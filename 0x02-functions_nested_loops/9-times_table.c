@@ -5,38 +5,34 @@
  */
 void times_table(void)
 {
-	int n1, n2;
+	int n1, n2, mult, mult1, mult2;
 
-	int n3 = n1 * n2;
+	for (n1 = 0; n1 <= 9; n1++)
 	{
-		for (n1 = 0; n1 <= 9; n1++)
+		for (n2 = 0; n2 <= 9; n2++)
 		{
-			for (n2 = 0; n2 <= 9; n2++)
+			mult = n1 * n2;
+			mult1 = mult / 10;
+			mult2 = mult % 10;
+			if (n2 == 0)
 			{
-				_putchar((n3 % 10) + '0');
-
-				if (n2 == 0)
-				{
-					_putchar('0');
-				}
-				else if (n3 / 10 == 0)
-				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar(' ');
-				}
-				if (n2 != 9)
-				{
-					_putchar(',');
-				}
-				else
-				{
-					_putchar('\n');
-				}
+				_putchar('0');
+			}
+			else if (mult < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(mult2 + '0');
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(mult1 + '0');
+				_putchar(mult2 + '0');
 			}
 		}
+		_putchar('\n');
 	}
 }
