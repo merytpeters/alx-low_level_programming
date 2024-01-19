@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _calloc - Allocates memory for an array and initialize it to zero
@@ -18,5 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	_allmem = malloc(total_size);
 	if (_allmem == NULL)
 		return (NULL);
+
+	memset(_allmem, 0, total_size);
 	return (_allmem);
 }
