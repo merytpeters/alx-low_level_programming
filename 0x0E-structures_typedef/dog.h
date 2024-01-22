@@ -20,4 +20,6 @@ struct dog
  * dogs_info - typedef for struct dog
  */
 typedef struct dog a_dog;
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 #endif
