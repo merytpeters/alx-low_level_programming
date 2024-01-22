@@ -21,5 +21,5 @@ struct dog
  */
 typedef struct dog a_dog;
 void init_dog(struct dog *d, char *name, float age, char *owner);
-
+void print_dog(struct dog *d);
 #endif
