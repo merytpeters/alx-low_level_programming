@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - prints numbers with a separator
- * @separator: First known argument
+ * @separator: First known argument, string
  * @n: Last known argument, number of integers passed
  * @...: A variable number of arguments
  * Return: Integers separated by ,
