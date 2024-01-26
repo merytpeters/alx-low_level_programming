@@ -5,7 +5,7 @@
 /**
  * print_numbers - prints numbers with a separator
  * @separator: First known argument
- * @n: Last known argument
+ * @n: Last known argument, number of integers passed
  * @...: A variable number of arguments
  * Return: Integers separated by ,
  */
@@ -22,7 +22,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d%s ", va_arg(numbers, int), separator);
 
 		else
-		printf("%d\n", va_arg(numbers, int));
+		printf("%d", va_arg(numbers, int));
 	}
+	printf("\n");
 	va_end(numbers);
 }
