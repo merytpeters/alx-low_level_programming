@@ -12,11 +12,13 @@ int create_file(const char *filename, char *text_content)
 	int i;
 	int wc;
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd)
 	{
-		chmod(filename, 0600);
-		return (1);
+		if (fd == 0600)
+			return (1);
+		if (fd != 0600)
+			return (1);
 	}
 	else if (fd == -1)
 		return (-1);
