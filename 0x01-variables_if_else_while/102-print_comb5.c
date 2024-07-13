@@ -6,30 +6,25 @@
  */
 int main(void)
 {
-	int n1;
-	int n2;
-	int n3;
-	int n4;
+	int num1;
+	int num2;
 
-	for (n1 = 0; n1 <= 9; n1++)
-		for (n2 = 0; n2 <= 8; n2++)
+	for (num1 = 0; num1 <= 99; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			for (n3 = 0; n3 <= 9; n3++)
-			for (n4 = n2 + 1; n4 <= 9; n4++)
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+			if (num1 != 98 || num2 != 99)
 			{
-				putchar((n1 % 10) + '0');
-				putchar((n2 % 10) + '0');
+				putchar(',');
 				putchar(' ');
-				putchar((n3 % 10) + '0');
-				putchar((n4 % 10) + '0');
-				if (!(n1 == 9 && n2 == 8 && n3 == 9 && n4 == 9))
-
-				{
-					putchar(',');
-					putchar(' ');
-				}
 			}
 		}
+	}
 	putchar('\n');
 	return (0);
 }
