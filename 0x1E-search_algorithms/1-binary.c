@@ -40,7 +40,7 @@ int binary_search(int *array, size_t size, int value)
 
 	print_arr(array, lowest, highest);
 
-	if ((unsigned int)array[0] == highest)
+	if (highest == 0)
 		highest = lowest;
 
 	while (lowest < highest)
