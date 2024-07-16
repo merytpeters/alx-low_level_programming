@@ -12,13 +12,13 @@ void print_arr(int *array, unsigned int lowest, unsigned int highest)
 	unsigned int i;
 
 	printf("Searching in array: ");
-        for (i = lowest; i <= highest; i++)
-        {
+	for (i = lowest; i <= highest; i++)
+	{
 		printf("%u", array[i]);
-               	if (i < highest)
-                       	printf(", ");
-       	}
-       	printf("\n");
+		if (i < highest)
+			printf(", ");
+	}
+	printf("\n");
 }
 
 /**
