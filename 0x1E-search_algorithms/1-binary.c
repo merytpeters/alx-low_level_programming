@@ -27,7 +27,7 @@ void print_arr(int *array, unsigned int lowest, unsigned int highest)
 * @size: Number of elements in the array
 * @value: Element being searched for
 *
-*Return: The index where value is located
+*Return: The index where value is located, -1 if NULL
 */
 
 int binary_search(int *array, size_t size, int value)
@@ -38,13 +38,10 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	print_arr(array, lowest, highest);
 
-	if (highest == 0)
-		highest = lowest;
-
-	while (lowest < highest)
+	while (lowest <= highest)
 	{
+		print_arr(array, lowest, highest);
 		mid = (lowest + highest) / 2;
 		if (array[mid] < value)
 			lowest = mid + 1;
@@ -52,8 +49,6 @@ int binary_search(int *array, size_t size, int value)
 			highest = mid - 1;
 		else
 			return (mid);
-
-		print_arr(array, lowest, highest);
 	}
 	return (-1);
 }
