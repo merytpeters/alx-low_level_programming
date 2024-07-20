@@ -11,15 +11,15 @@ int main(void)
 	int num;
 
 	prev = 1;
-	while (num < 50)
+	while (num <= 51)
 	{
 		next = firstNum + prev;
 		firstNum = prev;
 		prev = next;
 		num++;
-		if (num < 49)
+		if (num < 51)
 			printf("%u, ", next);
-		else if (num == 49)
+		else if (num == 51)
 			printf("%u\n", next);
 	}
 	return (0);
