@@ -9,7 +9,7 @@ int main(void)
 {
 	unsigned int next = 0, prev, firstNum = 0;
 	int num;
-	
+
 	prev = 1;
 	while (num < 50)
 	{
@@ -17,9 +17,9 @@ int main(void)
 		firstNum = prev;
 		prev = next;
 		num++;
-		if (num < 50)
+		if (num < 49)
 			printf("%u, ", next);
-		else if (num == 50)
+		else if (num == 49)
 			printf("%u\n", next);
 	}
 	return (0);
