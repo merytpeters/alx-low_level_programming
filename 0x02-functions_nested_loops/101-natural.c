@@ -2,7 +2,6 @@
 
 /**
 * main - Computes and prints multiples of 3 and 5
-* @num: Number given
 *
 * Return: Sum
 */
