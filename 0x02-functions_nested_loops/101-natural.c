@@ -3,7 +3,7 @@
 /**
 * main - Computes and prints multiples of 3 and 5
 *
-* Return: Sum
+* Return: 0 on success
 */
 int main(void)
 {
@@ -27,5 +27,5 @@ int main(void)
 		num += 1;
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
