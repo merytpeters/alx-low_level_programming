@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	unsigned int next = 0, prev, firstNum = 0;
+	unsigned long next = 0, prev, firstNum = 0;
 	int num;
 
 	prev = 1;
@@ -18,9 +18,9 @@ int main(void)
 		prev = next;
 		num++;
 		if (num < 50)
-			printf("%u, ", next);
+			printf("%ld, ", next);
 		else if (num == 50)
-			printf("%u\n", next);
+			printf("%ld\n", next);
 	}
 	return (0);
 }
