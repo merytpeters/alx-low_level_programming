@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <stdio.h>
+#include <assert.h>
 
 /**
 * interpolation_search - Interpolation Search function
@@ -12,8 +13,7 @@
 
 int interpolation_search(int *array, size_t size, int value)
 {
-	int low, high;
-	size_t outfrange = 0;
+	size_t low, high;
 
 	if (array == NULL || size == 0)
 		return (-1);
@@ -26,6 +26,7 @@ int interpolation_search(int *array, size_t size, int value)
 		size_t pos = low + (((double)(high - low) /
 			(array[high] - array[low])) * (value - array[low]));
 
+		assert((low <= pos) && (pos <= high));
 		printf("Value checked array[%zu] = [%d]\n", pos, array[pos]);
 
 		if (array[pos] == value)
@@ -36,15 +37,11 @@ int interpolation_search(int *array, size_t size, int value)
 			high = pos - 1;
 	}
 
-	if (value > array[high])
-	{
-		outfrange = (high + 1) * sizeof(int);
-	}
-	else if (value < array[low])
-	{
-		outfrange = (low - 1) * sizeof(int);
-	}
+	if (value == array[low])
+		return (low);
+	else
+		return (low - 1);
 
-	printf("Value checked array[%zu] is out of range\n", outfrange);
+	printf("Value checked array[%d] is out of range\n", array[low]);
 	return (-1);
 }
